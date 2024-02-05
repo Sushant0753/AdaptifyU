@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your existing styles here */
+
+        /* Hide the menu by default on small screens */
+        
+
+        /* Show the menu on small screens when the menu icon is clicked */
+        #menu.show {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Adjust the top position as needed */
+            left: 0;
+            background-color: #fff; /* Adjust background color as needed */
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        /* Style the menu items */
+        #menu li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd; /* Adjust border color as needed */
+            text-align: center;
+        }
+
+        /* Add styles for the menu icon */
+        #menu-icon {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body class="bg-custom-background">
+    <nav class="w-full h-14 flex justify-between items-center px-6 sm:px-8">
+        <div class="text-yellow-500">
+            Logo
+        </div>
+        <div class="sm:flex text-slate-500">
+            <ul id="menu" class="sm:flex hidden">
+                <li class="mx-[10px]"><span class="text-blue-500 px-1">01</span>Home</li>
+                <li class="mx-[10px]"><span class="text-blue-500 px-1">02</span>About Us</li>
+                <li class="mx-[10px]"><span class="text-blue-500 px-1">03</span>Work</li>
+                <li class="mx-[10px]"><span class="text-blue-500 px-1">04</span>Contact Us</li>
+            </ul>
+            <div class="flex justify-between items-center">
+                <div class="">Login/Sign Up</div>
+                <div class="sm:hidden flex px-2 text-4xl" id="menu-icon">&#8801;</div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Add JavaScript to toggle the menu visibility
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- HTML !-->
+<button class="button-9" role="button">Button 9</button>
+
+/* CSS */
+.button-9 {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-9:disabled {
+  cursor: default;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
